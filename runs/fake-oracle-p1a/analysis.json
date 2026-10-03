@@ -1,0 +1,244 @@
+{
+ "all": {
+  "any_signal_predicts_error": true,
+  "bootstrap": {
+   "reps": 2000,
+   "seed": 0,
+   "unit": "task"
+  },
+  "e_min": 40,
+  "invalid_steps": 0,
+  "negatives": 647,
+  "positives": 71,
+  "schema": "amp-analysis/1",
+  "signal_cost_share": 0.7998,
+  "signals": {
+   "contradiction": {
+    "auroc": 0.9465,
+    "ci95": null,
+    "negatives": 327,
+    "positives": 32,
+    "status": "not_estimable",
+    "unknown": 359,
+    "used": 359,
+    "why": [
+     "positives 32 < E_min 40"
+    ]
+   },
+   "novelty": {
+    "auroc": 0.4163,
+    "ci95": [
+     0.3424,
+     0.4892
+    ],
+    "negatives": 647,
+    "positives": 71,
+    "predicts_error": false,
+    "status": "estimated",
+    "unknown": 0,
+    "used": 718
+   },
+   "prediction_error": {
+    "auroc": 0.7817,
+    "ci95": [
+     0.7209,
+     0.8475
+    ],
+    "negatives": 647,
+    "positives": 71,
+    "predicts_error": true,
+    "status": "estimated",
+    "unknown": 0,
+    "used": 718
+   },
+   "stakes": {
+    "auroc": 0.5,
+    "ci95": null,
+    "negatives": 647,
+    "positives": 71,
+    "status": "not_estimable",
+    "unknown": 0,
+    "used": 718,
+    "why": [
+     "no variance in signal"
+    ]
+   },
+   "uncertainty": {
+    "auroc": 0.7617,
+    "ci95": [
+     0.7112,
+     0.8124
+    ],
+    "negatives": 647,
+    "positives": 71,
+    "predicts_error": true,
+    "status": "estimated",
+    "unknown": 0,
+    "used": 718
+   }
+  },
+  "split": "eval",
+  "steps": 718
+ },
+ "gsm8k": {
+  "any_signal_predicts_error": false,
+  "bootstrap": {
+   "reps": 2000,
+   "seed": 0,
+   "unit": "task"
+  },
+  "e_min": 40,
+  "invalid_steps": 0,
+  "negatives": 369,
+  "positives": 31,
+  "schema": "amp-analysis/1",
+  "signal_cost_share": 0.7999,
+  "signals": {
+   "contradiction": {
+    "auroc": 0.9651,
+    "ci95": null,
+    "negatives": 186,
+    "positives": 14,
+    "status": "not_estimable",
+    "unknown": 200,
+    "used": 200,
+    "why": [
+     "positives 14 < E_min 40"
+    ]
+   },
+   "novelty": {
+    "auroc": 0.4664,
+    "ci95": null,
+    "negatives": 369,
+    "positives": 31,
+    "status": "not_estimable",
+    "unknown": 0,
+    "used": 400,
+    "why": [
+     "positives 31 < E_min 40"
+    ]
+   },
+   "prediction_error": {
+    "auroc": 0.5,
+    "ci95": null,
+    "negatives": 369,
+    "positives": 31,
+    "status": "not_estimable",
+    "unknown": 0,
+    "used": 400,
+    "why": [
+     "positives 31 < E_min 40",
+     "no variance in signal"
+    ]
+   },
+   "stakes": {
+    "auroc": 0.5,
+    "ci95": null,
+    "negatives": 369,
+    "positives": 31,
+    "status": "not_estimable",
+    "unknown": 0,
+    "used": 400,
+    "why": [
+     "positives 31 < E_min 40",
+     "no variance in signal"
+    ]
+   },
+   "uncertainty": {
+    "auroc": 0.9058,
+    "ci95": null,
+    "negatives": 369,
+    "positives": 31,
+    "status": "not_estimable",
+    "unknown": 0,
+    "used": 400,
+    "why": [
+     "positives 31 < E_min 40"
+    ]
+   }
+  },
+  "split": "eval",
+  "steps": 400
+ },
+ "mbpp": {
+  "any_signal_predicts_error": true,
+  "bootstrap": {
+   "reps": 2000,
+   "seed": 0,
+   "unit": "task"
+  },
+  "e_min": 40,
+  "invalid_steps": 0,
+  "negatives": 278,
+  "positives": 40,
+  "schema": "amp-analysis/1",
+  "signal_cost_share": 0.7996,
+  "signals": {
+   "contradiction": {
+    "auroc": 0.922,
+    "ci95": null,
+    "negatives": 141,
+    "positives": 18,
+    "status": "not_estimable",
+    "unknown": 159,
+    "used": 159,
+    "why": [
+     "positives 18 < E_min 40"
+    ]
+   },
+   "novelty": {
+    "auroc": 0.4683,
+    "ci95": [
+     0.3832,
+     0.56
+    ],
+    "negatives": 278,
+    "positives": 40,
+    "predicts_error": false,
+    "status": "estimated",
+    "unknown": 0,
+    "used": 318
+   },
+   "prediction_error": {
+    "auroc": 1.0,
+    "ci95": [
+     1.0,
+     1.0
+    ],
+    "negatives": 278,
+    "positives": 40,
+    "predicts_error": true,
+    "status": "estimated",
+    "unknown": 0,
+    "used": 318
+   },
+   "stakes": {
+    "auroc": 0.5,
+    "ci95": null,
+    "negatives": 278,
+    "positives": 40,
+    "status": "not_estimable",
+    "unknown": 0,
+    "used": 318,
+    "why": [
+     "no variance in signal"
+    ]
+   },
+   "uncertainty": {
+    "auroc": 0.8004,
+    "ci95": [
+     0.7541,
+     0.843
+    ],
+    "negatives": 278,
+    "positives": 40,
+    "predicts_error": true,
+    "status": "estimated",
+    "unknown": 0,
+    "used": 318
+   }
+  },
+  "split": "eval",
+  "steps": 318
+ }
+}

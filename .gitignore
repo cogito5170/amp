@@ -1,0 +1,4 @@
+runs/*/trace.jsonl
+runs/*/claude-config/
+__pycache__/
+*.pyc

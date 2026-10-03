@@ -1,0 +1,42 @@
+{
+ "caller": "fake",
+ "calls": 4590,
+ "cap_usd": 7.0,
+ "e_min": 40,
+ "instrument": {
+  "mismatch": 0,
+  "n/a": 0,
+  "unverified": 0,
+  "verified": 918
+ },
+ "instrument_max_diff": 0.0,
+ "invalid_steps": 0,
+ "n_samples": 5,
+ "phase": "all",
+ "schema": "amp-run/1",
+ "spent_usd": 0.994625,
+ "steps": 918,
+ "stopped": null,
+ "suites": {
+  "gsm8k": {
+   "calibration": 40,
+   "eval": 200,
+   "eval_positives": 31,
+   "expected_positives": 5.0,
+   "p_cal": 0.0125,
+   "pilot": 10,
+   "rule_applied": "harder_subset",
+   "underpowered": true
+  },
+  "mbpp": {
+   "calibration": 40,
+   "eval": 159,
+   "eval_positives": 40,
+   "expected_positives": 65.0,
+   "p_cal": 0.1625,
+   "pilot": 10,
+   "rule_applied": null,
+   "underpowered": false
+  }
+ }
+}
