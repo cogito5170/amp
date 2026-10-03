@@ -20,7 +20,7 @@ CALLS = [
 ]
 def run(model_path, grants):
     lines, out = [], []
-    base = 1759363200000  # 2026-10-02T00:00:00Z
+    base = 1790899200000  # 2026-10-02T00:00:00Z
     for i, (tool, inp) in enumerate(CALLS):
         tu = f"tu{i+1}"
         ts = lambda k: f"2026-10-02T00:{i:02d}:{k:02d}.000Z"
@@ -38,7 +38,7 @@ def run(model_path, grants):
         reason = r.get("hookSpecificOutput", {}).get("permissionDecisionReason", "")
         out.append((tool, dec, reason[:90]))
         # tool result so the next call sees a finished prior call
-        lines.append({"type": "user", "sessionId": "s1", "uuid": f"r{i}", "timestamp": ts(3), "message": {"role": "user", "content": [{"type": "tool_result", "tool_use_id": tu, "content": "ok", "is_error": False}]}})
+        lines.append({"type": "user", "sessionId": "s1", "uuid": f"r{i}", "timestamp": ts(3), "toolUseResult": {}, "message": {"role": "user", "content": [{"type": "tool_result", "tool_use_id": tu, "content": [{"type": "text", "text": "ok"}], "is_error": False}]}})
     return out
 if __name__ == "__main__":
     res = run(sys.argv[1], sys.argv[2:])
