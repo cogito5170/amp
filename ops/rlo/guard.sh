@@ -21,7 +21,7 @@ fi
 mkdir -p "$(dirname "$REC")"
 BEFORE=$(wc -l < "$REC" 2>/dev/null || echo 0)
 OUT="$(printf '%s' "$INPUT" | "$VENV/bin/python" -m rlo.hooks --model "$MODEL" --mode enforce \
-        --grant Bash --grant mcp__github__add_issue_comment --record "$REC" 2>/dev/null)"
+        --grant Bash --grant mcp__github__add_issue_comment --grant mcp__claude-code-remote__send_message --record "$REC" 2>/dev/null)"
 RC=$?
 [ "$RC" -eq 0 ] || deny "rlo exited $RC"
 AFTER=$(wc -l < "$REC" 2>/dev/null || echo 0)

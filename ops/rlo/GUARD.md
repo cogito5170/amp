@@ -14,3 +14,4 @@ The middle verification line (BD-161) for the W1 worker session. Baseline built 
   - Denied: WebFetch (A1), Agent (A1), an unknown Bash argument (A4), unknown health (D).
   - Fail-closed: missing model, uncreatable venv, garbage stdin, empty stdin.
 - Do not edit `.claude/` or `ops/rlo/` from W1. Do not merge this into the AMP hub's branch.
+- amp-w1-guard-2 (BD-194): added ReadNotifications (read) and mcp__claude-code-remote__send_message (external, granted). Without them W1 could not read AMP's messages (A1).
