@@ -1,0 +1,182 @@
+{
+ "schema": "action-model/1",
+ "version": "amp-w1-local-1",
+ "specs": [
+  {
+   "schema": "action-spec/1",
+   "name": "Bash",
+   "version": "1",
+   "target_model": null,
+   "params": {
+    "command": {
+     "type": "string"
+    },
+    "description": {
+     "type": "string",
+     "required": false
+    },
+    "timeout": {
+     "type": "number",
+     "required": false
+    },
+    "run_in_background": {
+     "type": "bool",
+     "required": false
+    }
+   },
+   "preconditions": [],
+   "risk": "local",
+   "postcondition": [],
+   "window_ms": null,
+   "description": "셸 명령(W1). 위험 등급 local: 작업 턴은 쓰기 샌드박스(자기 clone · 우편함만 쓰기) 안에서 돌고, ga 허용 목록이 명령을 좁힌다"
+  },
+  {
+   "schema": "action-spec/1",
+   "name": "Edit",
+   "version": "1",
+   "target_model": null,
+   "params": {
+    "file_path": {
+     "type": "string"
+    },
+    "old_string": {
+     "type": "string"
+    },
+    "new_string": {
+     "type": "string"
+    },
+    "replace_all": {
+     "type": "bool",
+     "required": false
+    }
+   },
+   "preconditions": [],
+   "risk": "local",
+   "postcondition": [],
+   "window_ms": null,
+   "description": "파일 고치기. 칸은 K7 실제 실행에서 잰 것(file_path · old_string · new_string · replace_all)"
+  },
+  {
+   "schema": "action-spec/1",
+   "name": "Glob",
+   "version": "1",
+   "target_model": null,
+   "params": {
+    "pattern": {
+     "type": "string"
+    },
+    "path": {
+     "type": "string",
+     "required": false
+    }
+   },
+   "preconditions": [],
+   "risk": "read",
+   "postcondition": [],
+   "window_ms": null,
+   "description": "파일 찾기(W1). 칸은 도구 정의(pattern · path)"
+  },
+  {
+   "schema": "action-spec/1",
+   "name": "Grep",
+   "version": "1",
+   "target_model": null,
+   "params": {
+    "path": {
+     "type": "string"
+    },
+    "pattern": {
+     "type": "string"
+    },
+    "glob": {
+     "type": "string",
+     "required": false
+    },
+    "type": {
+     "type": "string",
+     "required": false
+    },
+    "output_mode": {
+     "type": "string",
+     "required": false
+    },
+    "-n": {
+     "type": "bool",
+     "required": false
+    },
+    "-i": {
+     "type": "bool",
+     "required": false
+    },
+    "-A": {
+     "type": "number",
+     "required": false
+    },
+    "-B": {
+     "type": "number",
+     "required": false
+    },
+    "-C": {
+     "type": "number",
+     "required": false
+    },
+    "head_limit": {
+     "type": "number",
+     "required": false
+    },
+    "multiline": {
+     "type": "bool",
+     "required": false
+    }
+   },
+   "preconditions": [],
+   "risk": "read",
+   "postcondition": [],
+   "window_ms": null,
+   "description": "찾기. 칸은 K7 실제 실행에서 잰 것(path · pattern). 그 밖의 칸은 A4 로 막힌다 -- 운영자가 잰 뒤 더한다"
+  },
+  {
+   "schema": "action-spec/1",
+   "name": "Read",
+   "version": "1",
+   "target_model": null,
+   "params": {
+    "file_path": {
+     "type": "string"
+    },
+    "offset": {
+     "type": "number",
+     "required": false
+    },
+    "limit": {
+     "type": "number",
+     "required": false
+    }
+   },
+   "preconditions": [],
+   "risk": "read",
+   "postcondition": [],
+   "window_ms": null,
+   "description": "파일 읽기. file_path 만 문서로 확인했다(그 밖의 칸은 A4 로 막힌다 -- 운영자가 더한다)"
+  },
+  {
+   "schema": "action-spec/1",
+   "name": "Write",
+   "version": "1",
+   "target_model": null,
+   "params": {
+    "file_path": {
+     "type": "string"
+    },
+    "content": {
+     "type": "string"
+    }
+   },
+   "preconditions": [],
+   "risk": "local",
+   "postcondition": [],
+   "window_ms": null,
+   "description": "파일 쓰기. file_path 는 문서 예로 확인, content 는 확인 못 함"
+  }
+ ]
+}

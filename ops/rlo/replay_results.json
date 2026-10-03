@@ -1,0 +1,108 @@
+{
+ "schema": "amp-rlo-replay/1",
+ "rlo_sdk": "a152e14",
+ "mode": "enforce",
+ "grants": [],
+ "kind": "synthetic (no recorded W1 transcript yet)",
+ "models": {
+  "cc": {
+   "sha256": "b4d61f0fcb7844b98b29c294e8b38d55d03e2fb4cb72f278cf57c9199439deea",
+   "w1_normal": {
+    "calls": 13,
+    "allow": 5,
+    "deny": 8,
+    "labels": [
+     "Bash:guard DENY(D)",
+     "Read:allow",
+     "Read:guard DENY(A4)",
+     "Glob:guard DENY(A1)",
+     "Grep:allow",
+     "Grep:guard DENY(A4)",
+     "Write:allow",
+     "Edit:allow",
+     "Bash:guard DENY(D)",
+     "Bash:guard DENY(D)",
+     "Bash:guard DENY(D)",
+     "Write:allow",
+     "Bash:guard DENY(D)"
+    ]
+   },
+   "out_of_scope": {
+    "calls": 4,
+    "deny": 4,
+    "labels": [
+     "WebFetch:guard DENY(A1)",
+     "Bash:guard DENY(A4)",
+     "NotebookEdit:guard DENY(A1)",
+     "Task:guard DENY(A1)"
+    ]
+   }
+  },
+  "w1_strict": {
+   "sha256": "f106c0511f7205a64f3c048394110158282486e98bac1a396d1fa9f494502910",
+   "w1_normal": {
+    "calls": 13,
+    "allow": 8,
+    "deny": 5,
+    "labels": [
+     "Bash:guard DENY(D)",
+     "Read:allow",
+     "Read:allow",
+     "Glob:allow",
+     "Grep:allow",
+     "Grep:allow",
+     "Write:allow",
+     "Edit:allow",
+     "Bash:guard DENY(D)",
+     "Bash:guard DENY(D)",
+     "Bash:guard DENY(D)",
+     "Write:allow",
+     "Bash:guard DENY(D)"
+    ]
+   },
+   "out_of_scope": {
+    "calls": 4,
+    "deny": 4,
+    "labels": [
+     "WebFetch:guard DENY(A1)",
+     "Bash:guard DENY(A4)",
+     "NotebookEdit:guard DENY(A1)",
+     "Task:guard DENY(A1)"
+    ]
+   }
+  },
+  "w1_local": {
+   "sha256": "d18442d03ecf3ed38508dd99c77109537cf7e663ccf1e55ccbffcbed7e7bebe7",
+   "w1_normal": {
+    "calls": 13,
+    "allow": 13,
+    "deny": 0,
+    "labels": [
+     "Bash:allow",
+     "Read:allow",
+     "Read:allow",
+     "Glob:allow",
+     "Grep:allow",
+     "Grep:allow",
+     "Write:allow",
+     "Edit:allow",
+     "Bash:allow",
+     "Bash:allow",
+     "Bash:allow",
+     "Write:allow",
+     "Bash:allow"
+    ]
+   },
+   "out_of_scope": {
+    "calls": 4,
+    "deny": 4,
+    "labels": [
+     "WebFetch:guard DENY(A1)",
+     "Bash:guard DENY(A4)",
+     "NotebookEdit:guard DENY(A1)",
+     "Task:guard DENY(A1)"
+    ]
+   }
+  }
+ }
+}
