@@ -2,7 +2,7 @@
 # Install rlo-sdk (stage-8, pinned) into a private venv for the W1 guard. Idempotent.
 # Owned by AMP / baseline (BD-183). W1 must not edit this file.
 set -u
-PIN="a152e14bc84dc282f66bb3426a12a70934fc530d"
+PIN="9af276f4e4864274a6414794aad55a8c1e5bcf19"
 VENV="${AMP_RLO_VENV:-$HOME/.cache/amp-rlo-venv}"
 MARK="$VENV/.pinned-$PIN"
 [ -f "$MARK" ] && exit 0
