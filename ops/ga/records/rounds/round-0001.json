@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-03",
+  "directives": [
+    "CMD-WA1"
+  ],
+  "n": 1,
+  "next": "wait",
+  "notices": [],
+  "repos": [
+    {
+      "repo": "amp",
+      "sha": "d4f656f2f81d0589aad78fc96dbdb54bbb4c7af7",
+      "tests": {
+        "failed": 0,
+        "passed": 31,
+        "skipped": 0
+      }
+    }
+  ],
+  "schema": "round/1",
+  "summary": "CMD-WA1 done: P1a harness + prereg 19b045c0, 31 tests, fake end to end",
+  "verdict": "success"
+}

@@ -1,0 +1,73 @@
+{
+ "schema": "ga-config/1",
+ "hub": {
+  "name": "AMP",
+  "repo": "cogito5170/baseline",
+  "guidance": "G.md",
+  "session_guidance": "SG.md",
+  "post_command": "/tmp/claude-0/-home-user/848b9e67-af02-5fb3-8bd9-7016023c738f/scratchpad/venv/bin/python -m ga --config /tmp/claude-0/-home-user/848b9e67-af02-5fb3-8bd9-7016023c738f/scratchpad/amphub/ga.json --ga-dir /tmp/claude-0/-home-user/848b9e67-af02-5fb3-8bd9-7016023c738f/scratchpad/amphub/.ga post --channel {session} --from {session} <보고 파일>"
+ },
+ "integration_branch": "claude/determined-gates-tmfesh",
+ "repos": {
+  "amp": {
+   "path": "/home/user/amp",
+   "remote": "origin",
+   "push": true,
+   "slug": "cogito5170/amp",
+   "test": [
+    "{python}",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-t",
+    "."
+   ]
+  }
+ },
+ "sessions": {
+  "W1": {
+   "prefix": "WA",
+   "tag": "W1",
+   "branch": "w1-p1a-harness",
+   "repos": [
+    "amp"
+   ],
+   "channel": "mailbox:W1"
+  }
+ },
+ "ownership": [
+  {
+   "repo": "amp",
+   "path": "ops/*",
+   "session": "AMP"
+  },
+  {
+   "repo": "amp",
+   "path": "PREP.md",
+   "session": "AMP"
+  },
+  {
+   "repo": "amp",
+   "path": "README.md",
+   "session": "AMP"
+  },
+  {
+   "repo": "amp",
+   "path": "*",
+   "session": "W1"
+  }
+ ],
+ "budget": {
+  "runs": 5,
+  "cost": 6.0
+ },
+ "runner": {
+  "kind": "manual"
+ },
+ "judge": {
+  "kind": "file"
+ },
+ "isolation": "clone"
+}

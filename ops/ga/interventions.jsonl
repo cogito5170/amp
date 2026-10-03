@@ -1,0 +1,4 @@
+{"n": 1, "kind": "runner_downgrade", "what": "runner headless -> manual, judge llm -> file", "why": "BD-169 classifier refused ga permit (Create Unsafe Agents); BD-170 user directive '병렬로 진행해라' (CMD-AMP1 rev 6)", "runs_spent": 0}
+{"n": 2, "kind": "operator_did_turn", "what": "hub AMP built CMD-WA1 in the W1 clone and posted the W1 report with ga post", "why": "manual Runner; no worker session", "runs_spent": 0}
+{"n": 3, "kind": "operator_judged", "what": "round-1 verdict written by the operator (FileJudge) — self-judged", "why": "LLM Judge not permitted (no ga permit); baseline is the outside judge via review/1", "runs_spent": 0}
+{"n": 4, "kind": "config", "what": "ownership ops/* -> AMP added; budget runs 5 / cost 6", "why": "hub-owned records and rlo prep", "runs_spent": 0}

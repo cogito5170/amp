@@ -1,0 +1,33 @@
+{
+ "verdict": {
+  "schema": "verdict/1",
+  "class": "success",
+  "round": 1,
+  "evidence": {
+   "heads": {
+    "amp": "d4f656f2f81d0589aad78fc96dbdb54bbb4c7af7"
+   },
+   "tests": {
+    "amp": {
+     "passed": 31,
+     "failed": 0,
+     "skipped": 0
+    }
+   },
+   "notes": [
+    "manual Runner: hub AMP did the W1 turn itself (BD-169 classifier refusal, BD-170 user directive) — this verdict is self-judged; baseline is the outside judge (review/1)",
+    "no rlo guard (no worker turn to guard, METHOD §4c 7)",
+    "mutation 10/10 caught; prereg bytes deterministic; fake and oracle-simulation runs end to end at cost 0"
+   ]
+  },
+  "claims_vs_evidence": [],
+  "next": {
+   "choice": "wait",
+   "reason": "real measurement path (claude-cli / anthropic-api / gemini-api) is baseline's next directive (CMD-AMP1 rev 6 (3))"
+  }
+ },
+ "summary": "CMD-WA1 done: P1a harness + prereg 19b045c0, 31 tests, fake end to end",
+ "directive": null,
+ "decision": null,
+ "action": null
+}
